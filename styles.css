@@ -1,0 +1,662 @@
+/* Define comportamento da rolagem suave para navegadores que suportam */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estiliza o corpo da página, define a fonte, margem, cor de fundo e outros estilos */
+body {
+    font-family: "Space Grotesk", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #272727;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Estilos para o cabeçalho fixo, com sombra e conteúdo alinhado */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fdfdfd;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Logo no cabeçalho, com tamanho e cor */
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #8c00ff;
+    width: 200px;
+    height: auto ;
+}
+
+/* Estiliza o menu de navegação no cabeçalho */
+.header nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Estilo da lista de navegação */
+.header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+/* Estilo dos itens da navegação */
+.header nav ul li {
+    margin: 0 15px;
+}
+
+/* Estiliza os links da navegação */
+.header nav ul li a {
+    text-decoration: none;
+    color: #797979;
+    font-weight: bold;
+}
+
+/* Adiciona efeito de hover nos links de navegação */
+.header nav ul li a:hover {
+    color: #8c00ff;
+}
+
+/* Adiciona sublinhado animado ao passar o mouse nos links */
+nav a::after {
+    content: " ";
+    width: 0%;
+    height: 2px;
+    background-color: #8c00ff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.4s ease-in-out;
+}
+
+/* Efeito de expansão do sublinhado ao passar o mouse */
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Botões de navegação com fundo roxo e efeito de hover */
+.header nav ul li .btn {
+    background-color: #8c00ff;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Efeito de hover no botão da navegação */
+.header nav ul li .btn:hover {
+    background-color: #C19EFF;
+}
+
+/* Container da introdução com layout flexível */
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* Estiliza a imagem do intro com bordas arredondadas */
+.intro-image img {
+    border-radius: 50%;
+    object-fit: cover;
+    max-width: 350%;
+    height: auto;
+    padding-top: 0%;
+    position:relative;
+    padding-top: 50px;
+    margin-bottom: -50px;
+}
+
+/* Estilo para o texto de introdução */
+.intro-text {
+    text-align: center;
+}
+
+.intro-text h1 {
+    font-size: 40px;
+    color: #797979;
+}
+
+.intro-text p {
+    font-size: 20px;
+}
+
+/* Define a cor e o estilo do nome */
+.nome {
+    color: #8c00ff;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+/* Botões com estilo e efeitos de hover */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #8c00ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 80px;
+}
+
+/* Efeito de hover no botão */
+.btn:hover {
+    background-color: #af4dff;
+}
+
+/* Estiliza as seções da página com espaçamento */
+section {
+    margin-bottom: 200px;
+}
+
+/* Estilos para a seção sobre */
+.sobre {
+    padding: 150px;
+    color: #797979;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+/* Container flexível para a seção sobre */
+.sobre-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+/* Estilo do título h2 na seção sobre */
+.sobre h2 {
+    display: grid;
+    font-size: 35px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    color: #5b5b5b;
+}
+
+/* Estilo do título h1 na seção sobre */
+.sobre h1 {
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+
+/* Estilo dos parágrafos na seção sobre */
+.sobre p {
+    font-size: 16px;
+    hyphens: auto;
+    color: #000;
+}
+
+/* Estilo dos elementos de experiência */
+.experience {
+    text-align: center;
+    margin-right: 20px;
+    flex: 1;
+    width: 50%;
+    height: 520px;
+    padding: 30px;
+    border: 2px solid #797979;
+    border-radius: 10px;
+}
+
+/* Título da experiência */
+.experience h1 {
+    margin-top: 0;
+    padding-top: 0;
+    background-color: #8c00ff;
+    width: 300px;
+    height: auto;
+    color: #fff;
+    font-style: normal;
+    font-size: 30px;
+}
+
+/* Estilo das listas de experiência */
+.experience li {
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 10px; 
+    text-align: justify;
+    hyphens: auto;
+    font-size: 15px;
+    padding-top: 20px;
+    color: #000;
+}
+
+/* Estilo das imagens nas listas de experiência */
+.experience li img {
+    margin-right: 10px;
+}
+
+/* Estilo da seção de resumo */
+.resumo {
+    flex: 1;
+    margin: 0 20px;
+    width: 50%;
+    height: 520px;
+    padding: 30px;
+    border: 2px solid #797979;
+    border-radius: 10px;
+}
+
+/* Título da seção resumo */
+.resumo h1 {
+    margin-top: 0;
+    margin-bottom: 0px;
+    background-color: #8c00ff;
+    width: 300px;
+    height: auto;
+    color: #fff;
+    font-style: normal;
+    font-size: 30px;
+}
+
+/* Estilo dos parágrafos na seção resumo */
+.resumo p {
+    margin-top: 0;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Estilo da seção graduação */
+.graduacao {
+    text-align: center;
+    flex: 1;
+    margin: 0 20px;
+    width: 50%;
+    height: 520px;
+    padding: 30px;
+    border: 2px solid #797979;
+    border-radius: 10px;
+}
+
+/* Título da seção graduação */
+.graduacao h1 {
+    margin-top: 0;
+    padding-top: 0;
+    background-color: #8c00ff;
+    width: 300px;
+    height: auto;
+    color: #fff;
+    font-style: normal;
+    font-size: 30px;
+}
+
+/* Estilo das listas de graduação */
+.graduacao li {
+    display: flex; 
+    align-items: center;
+    font-size: 15px;
+    text-align: justify;
+    hyphens: auto;
+    margin: 0px;
+    color: #000;
+}
+
+/* Estilo das imagens nas listas de graduação */
+.graduacao li img {
+    margin-right: 10px;
+}
+
+/* Estilo do container de certificações */
+.container {
+    text-align: center;
+    flex: 1;
+    margin: 0 20px;
+    width: 50%;
+    height: 520px;
+    padding: 30px;
+    border: 2px solid #797979;
+    border-radius: 10px;
+    justify-content: space-around;
+}
+
+/* Título do container */
+.container h1 {
+    margin-top: 0;
+    padding-top: 0;
+    background-color: #8c00ff;
+    width: 300px;
+    height: auto;
+    color: #fff;
+    font-style: normal;
+    font-size: 30px;
+}
+
+/* Estilo das certificações */
+.certificates {
+    list-style: none; 
+    padding: 0; 
+}
+
+/* Estilo dos itens de certificação */
+.certificates li { 
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 10px; 
+    text-align: justify;
+    hyphens: auto;
+    font-size: 15px;
+    color: #000;
+}
+
+/* Estilo das imagens nas certificações */
+.certificates img { 
+    width: 30px; 
+    height: 30px; 
+    margin-right: 5px;
+}
+
+/* Estilo da seção skills */
+.skills {
+    text-align: center;
+    padding: 150px;
+}
+
+/* Título da seção skills */
+.skills h2 {
+    font-size: 40px;
+    margin-top: 0%;
+    color: #5b5b5b;
+    margin-bottom: 80px;
+}
+
+/* Layout flexível para os ícones de skills */
+.skill-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Estilo dos itens de skill */
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo das imagens de skill */
+.skill-item img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+    border-radius: 3%;
+}
+
+/* Estilo da seção work */
+.work {
+    text-align: center;
+    padding-top: 120px;
+    margin-top: 0px;
+    margin-bottom: 200px;
+}
+
+/* Título da seção work */
+.work h2 {
+    font-size: 40px;
+    margin-top: 0%;
+    color: #5b5b5b;
+    margin-bottom: 80px;
+}
+
+/* Layout flexível para os ícones de work */
+.work-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Estilo dos itens de trabalho */
+.work-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo das imagens de trabalho */
+.work-item img {
+    width: 250px;
+    height: 400px;
+    margin-bottom: 10px;
+    border-radius: 3%;
+}
+
+/* Estilo dos títulos nos itens de trabalho */
+.work-item span {
+    font-size: 1.2rem;
+}
+
+/* Estilos para o formulário de contato */
+.contato {
+    margin: 50px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Título da seção de contato */
+.contato h2 {
+    font-size: 40px;
+    color: #5b5b5b;
+}
+
+/* Estilos dos grupos de formulário */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Estilo das labels do formulário */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Estilos para inputs e textarea do formulário */
+.form-group input, .form-group textarea {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #797979;
+    border-radius: 4px;
+}
+
+/* Efeito de foco no input e textarea */
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #8c00ff;
+}
+
+/* Estilo do botão do formulário */
+button.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #8c00ff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Efeito de hover no botão de contato */
+button.btn:hover {
+    background-color: #af4dff;
+}
+
+/* Estilo do título h1 na seção de contato */
+.contato h1 {
+    font-size: 30px;
+    color: #797979;
+}
+
+/* Estilo para os ícones sociais */
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    border-radius: 40px;
+}
+
+/* Adicionar media query para dispositivos com largura até 768px (exemplo para tablets e celulares) */
+@media (max-width: 768px) {
+    /* Ajustes no cabeçalho */
+    .header {
+        flex-direction: column;
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* Logo do cabeçalho */
+    .header .logo {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    /* Menu de navegação em tela pequena */
+    .header nav ul {
+        display: block;
+    }
+
+    .header nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Ajuste na imagem de introdução */
+    .intro-image img {
+        width: 80%; /* Reduzir o tamanho da imagem */
+        height: auto;
+    }
+
+    /* Ajustar a seção de introdução */
+    .intro-text h1 {
+        font-size: 30px;
+    }
+
+    .intro-text p {
+        font-size: 16px;
+    }
+
+    /* Ajustes na seção 'sobre' */
+    .sobre-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sobre .h2 {
+        font-size: 28px;
+    }
+
+    /* Ajuste nos itens de habilidade */
+    .skill-icons {
+        flex-direction: column;
+    }
+
+    .skill-item {
+        margin-bottom: 20px;
+    }
+
+    .skill-item img {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* Ajustes na seção de portfólio */
+    .work-icons {
+        flex-direction: column;
+    }
+
+    .work-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Ajustes na seção de contato */
+    .form-group input, .form-group textarea {
+        width: 100%;
+    }
+
+    .form-group input, .form-group textarea, .btn {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .social-icons img {
+        width: 40px;
+        height: 40px;
+        margin: 5px;
+    }
+}
+
+/* Adicionar uma media query para telas menores que 480px (smartphones) */
+@media (max-width: 480px) {
+    /* Ajustes nos títulos */
+    .intro-text h1 {
+        font-size: 24px;
+    }
+
+    .intro-text p {
+        font-size: 14px;
+    }
+
+    .nome {
+        font-size: 30px;
+    }
+
+    .skills h2 {
+        font-size: 28px;
+    }
+
+    /* Ajustar a altura da imagem de perfil */
+    .intro-image img {
+        width: 70%;
+    }
+
+    /* Ajustes para a seção de 'sobre' */
+    .sobre-container {
+        padding: 10px;
+    }
+
+    .experience, .resumo, .graduacao, .container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .experience h1, .resumo h1, .graduacao h1, .container h1 {
+        font-size: 20px;
+    }
+
+    .experience li, .resumo p, .graduacao li {
+        font-size: 14px;
+    }
+
+    /* Ajuste para a largura dos inputs */
+    .form-group input, .form-group textarea {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 16px;
+    }
+
+    /* Ajustar o botão de contato */
+    .form-group button {
+        font-size: 14px;
+    }
+}
